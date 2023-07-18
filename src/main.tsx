@@ -1,14 +1,15 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { router } from "./App";
-import { RouterProvider } from "react-router-dom";
-import "./index.css";
-import CartProvider from "./contexts/CartContext";
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import {router} from './App'
+import { RouterProvider } from 'react-router-dom'
+import './index.css'
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
+import CartProvider from './contexts/CartContext'
+
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <CartProvider>
-      <RouterProvider router={router} />
+      <RouterProvider router={router}/>
     </CartProvider>
-  </React.StrictMode>
-);
+  </React.StrictMode>,
+)
