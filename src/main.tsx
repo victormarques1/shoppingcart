@@ -1,15 +1,17 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import {router} from './App'
-import { RouterProvider } from 'react-router-dom'
-import './index.css'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { router } from "./App";
+import { RouterProvider } from "react-router-dom";
+import "./index.css";
 
-import CartProvider from './contexts/CartContext'
+import CartProvider from "./contexts/CartContext";
+import { Toaster } from "react-hot-toast";
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <CartProvider>
-      <RouterProvider router={router}/>
+      <Toaster position="top-center" reverseOrder={false} />
+      <RouterProvider router={router} />
     </CartProvider>
-  </React.StrictMode>,
-)
+  </React.StrictMode>
+);
